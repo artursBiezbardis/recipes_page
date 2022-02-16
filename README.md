@@ -8,3 +8,4 @@ To run app locally:
 + In cli run composer install
 + In cli run npm install
 + In cli run symfony server:start
++ in browser open localhost:8000
