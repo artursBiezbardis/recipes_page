@@ -3,7 +3,8 @@ To run app locally:
 + Install simfony-cli https://symfony.com/download
 + Open cli in location where app will be stored
 + Run "git clone git@github.com:artursBiezbardis/recipes_page.git" on cli
-+ Open .env, in line 15- change <username> and <password> for DB - use your mysql credentials
++ Open cli in app root folder
++ Open .env, in line 15- change username and password for DB - use your mysql credentials
 + In cli run composer install
 + In cli run npm install
 + In cli run symfony server:start
