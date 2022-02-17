@@ -1,3 +1,4 @@
+!!!App is not ready yet!!!
 To run app locally:
 + Recruitments - mysql 8.0, PHP 8.1.2, composer 2.x, npm 6.14.4, git, symfony-cli
 + Install simfony-cli https://symfony.com/download
