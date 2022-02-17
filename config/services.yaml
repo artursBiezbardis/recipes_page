@@ -27,3 +27,8 @@ services:
         class: App\Admin\CategoryAdmin
         tags:
             - { name: sonata.admin, model_class: App\Entity\Category, manager_type: orm, label: Category }
+
+    admin.recipe_form:
+        class: App\Admin\RecipeFormAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Recipe, manager_type: orm, label: 'Recipe form' }

@@ -19,21 +19,24 @@ class Recipe
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $preparationTime;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $cookingTime;
 
-    #[ORM\Column(type: 'json')]
+    #[ORM\Column(type: 'json', nullable: true)]
     private $shortDescription;
 
-    #[ORM\Column(type: 'json')]
+    #[ORM\Column(type: 'json', nullable: true)]
     private $ingridients;
 
-    #[ORM\Column(type: 'json')]
+    #[ORM\Column(type: 'json', nullable: true)]
     private $cookingMethod;
 
     #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'recipes')]
     #[ORM\JoinColumn(nullable: false)]
     private $category;
+
+    #[ORM\Column(type: 'array', nullable: true)]
+    private $description = [];
 
     public function getId(): ?int
     {
@@ -120,6 +123,18 @@ class Recipe
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getDescription(): ?array
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?array $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }
